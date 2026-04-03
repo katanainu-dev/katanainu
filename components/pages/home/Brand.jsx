@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa6";
+
 const videoVariants = {
   hidden: { y: 50, opacity: 0 },
   visible: {
@@ -37,38 +38,15 @@ const extraVideos = [
     poster: "/assets/images/footage-poster/gameplay-footage-2.webp",
     name: "gameplay-footage-2",
   },
-  // {
-  //   videoLink: "kEmfOSiqX1g",
-  //   poster: "/assets/images/footage-poster/new-map.webp",
-  //   name: "new-map",
-  // },
-  // {
-  //   videoLink: "7aqQbZ8Kv7I",
-  //   poster: "/assets/images/footage-poster/gameplay-footage.webp",
-  //   name: "gameplay-footage",
-  // },
 ];
 
 const Brand = () => {
   const [videos, setVideos] = useState("Vj4eSet_2nA");
-  const features = [
-    "Distinct visual style",
-    "High-quality AAA graphics",
-    "Skill-based gameplay",
-    "Community-driven competition",
-    "No Pay2Win — only Fun2Play",
-  ];
+
   return (
     <div className="text-white">
-      <section className=" flex flex-col gap-5 sm:gap-7 lg:flex-row  main-container">
+      <section className="flex flex-col gap-5 sm:gap-7 lg:flex-row main-container">
         <div className="relative w-full min-h-[373px] sm:min-h-[641px] flex-1 mt-[70px]">
-          {/* <Image
-            src={"/assets/images/aboutImg.webp"}
-            alt="dog nft with sowrd"
-            fill
-            className="object-cover"
-          /> */}
-
           <motion.div
             className="relative w-full pt-12 flex-1 mt-8 sm:mt-10 md:mt-12 lg:mt-10 xl:mt-0 flex flex-col gap-5"
             variants={videoVariants}
@@ -91,7 +69,7 @@ const Brand = () => {
               ></iframe>
             </motion.div>
 
-            {/* more videos */}
+            {/* Extra videos grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 justify-center sm:justify-start gap-2.5 md:gap-3 xl:gap-4">
               {extraVideos?.map((video, idx) => (
                 <div
@@ -99,7 +77,6 @@ const Brand = () => {
                   onClick={() => setVideos(video?.videoLink)}
                   className="relative flex items-center justify-center isolate cursor-pointer"
                 >
-                  {/* paly button */}
                   <button className="absolute z-10">
                     {video?.videoLink === videos ? (
                       <FaPause className="2xl:w-5 2xl:h-5 border p-1 rounded-full" />
@@ -107,7 +84,6 @@ const Brand = () => {
                       <FaPlay className="2xl:w-5 2xl:h-5 border p-1 rounded-full bg-white text-black" />
                     )}
                   </button>
-                  {/* poster */}
                   <Image
                     src={video?.poster}
                     alt={video?.name}
@@ -118,6 +94,31 @@ const Brand = () => {
                 </div>
               ))}
             </div>
+
+            {/* More Videos Button */}
+            <a
+              href="http://youtube.com/c/katanainu/videos"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: '#f0a500',
+                border: '1px solid rgba(240,165,0,0.45)',
+                padding: '10px 20px',
+                display: 'inline-block',
+                marginTop: '4px',
+                borderRadius: '10px',
+                fontSize: '13px',
+                fontWeight: '700',
+                letterSpacing: '3px',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                background: 'rgba(240,165,0,0.06)',
+                textAlign: 'center',
+              }}
+            >
+              ▶ More Videos →
+            </a>
+
           </motion.div>
         </div>
 
