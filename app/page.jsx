@@ -48,7 +48,6 @@ export default function Home() {
         <div className="w-full bg-black">
           <Newsletter />
         </div>
-        <BrandLogo />
       </div>
     </main>
   );
