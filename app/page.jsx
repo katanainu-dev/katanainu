@@ -30,11 +30,11 @@ export default function Home() {
       <div className="bg-[url('/assets/images/background.jpg')] bg-[50%_25%] bg-cover z-[1]  relative brand_container">
         {/* <Blogs /> */}
         <PlayClosedBeta />
-        <div style={{ display: "flex", gap: "1rem", padding: "0 1rem" }}>
-          <div style={{ width: "50%" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", padding: "0 1rem", maxWidth: "1400px", margin: "0 auto" }}>
+          <div style={{ flex: "1 1 400px" }}>
             <Web2Banner />
           </div>
-          <div style={{ width: "50%" }}>
+          <div style={{ flex: "1 1 400px" }}>
             <Web3Banner />
           </div>
         </div>
