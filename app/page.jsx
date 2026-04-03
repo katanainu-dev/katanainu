@@ -1,3 +1,6 @@
+Ja, genau richtig! 👍 Nur die Einrückung noch anpassen — hier der komplette saubere Code:
+
+```jsx
 //import Bannner from "@/components/pages/home/Bannner";
 import Brand from "@/components/pages/home/Brand";
 import BrandLogo from "@/components/pages/home/BrandLogo";
@@ -30,8 +33,10 @@ export default function Home() {
       <div className="bg-[url('/assets/images/background.jpg')] bg-[50%_25%] bg-cover z-[1]  relative brand_container">
         {/* <Blogs /> */}
         <PlayClosedBeta />
-        <Web2Banner />
-        <Web3Banner />
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <Web2Banner />
+          <Web3Banner />
+        </div>
         <Web2Web3Section />
         <div className="flex justify-center">
           <LearnMoreAboutWeb3 />
@@ -51,3 +56,6 @@ export default function Home() {
     </main>
   );
 }
+```
+
+**Alles kopieren, einfügen, speichern, committen!** ✅
