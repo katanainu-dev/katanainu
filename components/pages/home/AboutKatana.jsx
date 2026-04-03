@@ -71,27 +71,7 @@ export default function AboutKatana() {
           </div>
         ))}
       </div>
-      <a
-        href="http://youtube.com/c/katanainu/videos"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          color: '#f0a500',
-          border: '1px solid rgba(240,165,0,0.45)',
-          padding: '10px 20px',
-          display: 'inline-block',
-          marginBottom: '20px',
-          borderRadius: '10px',
-          fontSize: '13px',
-          fontWeight: '700',
-          letterSpacing: '3px',
-          textTransform: 'uppercase',
-          textDecoration: 'none',
-          background: 'rgba(240,165,0,0.06)',
-        }}
-      >
-        ▶ More Videos →
-      </a>
+
       <div className={styles.bullets}>
         {bullets.map((text, i) => (
           <div key={i}>
