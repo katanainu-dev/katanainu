@@ -57,12 +57,12 @@ export default function Web3Banner() {
               sub: "NFT-based assets & economy",
               purple: false,
             },
-            {
-              icon: "🌐",
-              title: "Cross-Server Play",
-              sub: "Seamless multiplayer worlds",
-              purple: true,
-            },
+{
+  icon: <Image src="/katana-logo.png" alt="Katana Inu" width={28} height={28} style={{objectFit:'contain'}}/>,
+  title: "$KATA Token",
+  sub: "Earn $KATA Token with Utility",
+  purple: true,
+},
           ].map(({ icon, title, sub, purple }) => (
             <div
               key={title}
@@ -92,7 +92,7 @@ export default function Web3Banner() {
 
         {/* Learn More */}
         <a href="/web3" className={styles.learnMore}>
-          Learn More About Web3 →
+          Learn More About Web3 & $KATA Token →
         </a>
       </div>
     </div>
