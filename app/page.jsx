@@ -1,6 +1,3 @@
-Ja, genau richtig! 👍 Nur die Einrückung noch anpassen — hier der komplette saubere Code:
-
-```jsx
 //import Bannner from "@/components/pages/home/Bannner";
 import Brand from "@/components/pages/home/Brand";
 import BrandLogo from "@/components/pages/home/BrandLogo";
@@ -56,6 +53,3 @@ export default function Home() {
     </main>
   );
 }
-```
-
-**Alles kopieren, einfügen, speichern, committen!** ✅
