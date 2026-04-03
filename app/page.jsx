@@ -17,22 +17,22 @@ import Web2Web3Section from "@/components/pages/home/Web2Web3Section";
 import Web2Banner from "@/components/pages/home/Web2Banner";
 import Web3Banner from "@/components/pages/home/Web3Banner";
 import Register from "@/components/Register";
+
 export default function Home() {
   return (
     <main className="">
       <HeroHeader />
       {/* <WinBySharing /> */}
-
       <div className="bg-[url('/assets/images/background.jpg')] bg-[0%_25%] bg-cover z-[1]  relative brand_container">
         <Brand />
       </div>
       {/* <BabyDogeImage /> */}
       <div className="bg-[url('/assets/images/background.jpg')] bg-[50%_25%] bg-cover z-[1]  relative brand_container">
         {/* <Blogs /> */}
-
         <PlayClosedBeta />
+        <Web2Banner />
+        <Web3Banner />
         <Web2Web3Section />
-
         <div className="flex justify-center">
           <LearnMoreAboutWeb3 />
         </div>
@@ -40,7 +40,6 @@ export default function Home() {
         {/* <Trailers /> */}
         <Register />
         <ChoosePlayer />
-
         <Requirements />
         <Promoters />
         {/* <WhereToBuyToken /> */}
