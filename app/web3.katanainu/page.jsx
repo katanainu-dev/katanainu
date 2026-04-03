@@ -1,4 +1,3 @@
-import BrandLogo from "@/components/pages/home/BrandLogo";
 import TokenOverview from "@/components/pages/home/TokenOverview";
 import WhereToBuyToken from "@/components/pages/home/WhereToBuyToken";
 import KataP2ESection from "@/components/pages/home/KataP2ESection";
@@ -6,7 +5,6 @@ import KataP2ESection from "@/components/pages/home/KataP2ESection";
 export default function Web3Katana() {
   return (
     <main className="overflow-hidden">
-      <BrandLogo />
       <TokenOverview />
       <WhereToBuyToken />
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 1rem" }}>
