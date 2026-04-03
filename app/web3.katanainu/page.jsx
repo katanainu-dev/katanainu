@@ -6,6 +6,9 @@ import Brand from "@/components/pages/home/Brand";
 export default function Web3Katana() {
   return (
     <main className="overflow-hidden">
+      <div className="bg-[url('/assets/images/background.jpg')] bg-[0%_25%] bg-cover z-[1] relative brand_container">
+        <Brand />
+      </div>
       <TokenOverview />
       <WhereToBuyToken />
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 1rem" }}>
