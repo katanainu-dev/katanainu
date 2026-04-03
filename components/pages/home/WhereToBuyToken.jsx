@@ -1,123 +1,101 @@
-"use client";
+'use client'
 
-import { Button } from "@/components/ui/button";
-import { kataTokenStorePartner } from "@/data";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { FaCopy } from "react-icons/fa6";
+// components/WhereToBuyToken.jsx
+import { useState } from 'react'
+import Image from 'next/image'
+import styles from './WhereToBuyToken.module.css'
 
-const tokenStore = [
-  {
-    place: "uniswap",
-    code: "0x2e85ae1C47602f7927bCabc2Ff99C40aA222aE15",
-    src: "/assets/images/kataToken/uniswap.png",
-  },
-  {
-    place: "Base",
-    code: "0x02454a97A8372f3A760A033DBb39E67D73BD6d87",
-    src: "/assets/images/logo/base.png",
-    link: "https://app.uniswap.org/swap?inputCurrency=0x2e85ae1C47602f7927bCabc2Ff99C40aA222aE15&chain=mainnet",
-  },
-  {
-    place: "pancake swap",
-    code: "0x6D6bA21E4C4b29CA7Bfa1c344Ba1E35B8DaE7205",
-    src: "/assets/images/kataToken/pancake-2.svg",
-  },
-];
+const dexes = [
+  { name: 'Uniswap', chain: 'ETH Chain', logo: '🦄', address: '0x2e85ae1C47602f7927bCabc2Ff99C40aA222aE15' },
+  { name: 'Base', chain: 'Base Chain', logo: '🔵', address: '0x02454a97A8372f3A760A033D8b39E67D73BD6d87' },
+  { name: 'PancakeSwap', chain: 'BSC Chain', logo: null, address: '0x6D6bA21E4C4b29CA7Bfa1c344Ba1E35B8DaE7205' },
+]
 
-const WhereToBuyToken = () => {
-  const [copiedIndex, setCopiedIndex] = useState(null);
+const cexes = [
+  { name: 'BitMart', emoji: '🅱', href: 'https://www.bitmart.com' },
+  { name: 'MEXC Global', emoji: '📊', href: 'https://www.mexc.com' },
+  { name: 'DigiFinex', emoji: '💹', href: 'https://www.digifinex.com' },
+  { name: 'ProBit', emoji: '🔷', href: 'https://www.probit.com' },
+  { name: 'LATOKEN', emoji: '🔶', href: 'https://latoken.com' },
+]
 
-  const copyCode = (code, index) => {
-    navigator.clipboard.writeText(code);
-    setCopiedIndex(index);
-  };
+function CopyButton({ address }) {
+  const [copied, setCopied] = useState(false)
+  const handleCopy = () => {
+    navigator.clipboard.writeText(address).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
   return (
-    <section className="main-container mt-14 md:mt-20 lg:mt-20 xl:mt-28 2xl:mt-32 mb-8 sm:mb-10 md:mb-12 xl:mb-14 2xl:mb-20">
-      <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 mb-4 sm:mb-6 md:mb-8">
-        <h2>$KATA Token is a Web3 product of Katana Inu</h2>
-        <h3 className="uppercase text-gradient font-bold tracking-[2px] text-xl sm:text-2xl md:text-3xl font-jost text-center">
-          Where Can I Buy $KATA Tokens?
-        </h3>
-        <p className="text-xs sm:text-sm md:text-base text-[#d3d3d3] font-medium text-center max-w-[960px]">
-          Pancake Swap and Uniswap are the easiest outlets for purchasing $KATA
-          Token. Copy and Paste the correct contract depending on the chain into
-          PancakeSwap / Uniswap and chose the amount you want to buy and simply
-          swap it for any other token you have. Be careful not to send funds to
-          this address directly, as you will lose your tokens.
-        </p>
-        <h2>
-          <span className="text-gradient">
-            With $KATA token you can access to Web3, NFTs and Play2Earn
-            Ecosystem!
-          </span>
-        </h2>
+    <button onClick={handleCopy} className={`${styles.copyBtn} ${copied ? styles.copied : ''}`}>
+      {copied ? '✓ COPIED' : 'COPY'}
+    </button>
+  )
+}
+
+export default function WhereToBuyToken() {
+  return (
+    <div className={styles.section}>
+      <div className={styles.eyebrow}>$KATA Token is a Web3 Product of Katana Inu</div>
+      <h2 className={styles.title}>Where Can I Buy <span>$KATA</span> Tokens?</h2>
+      <p className={styles.subtitle}>
+        <strong>PancakeSwap and Uniswap</strong> are the easiest platforms for purchasing $KATA.
+        Copy the correct contract address for your chain, paste it into the DEX, choose your amount, and swap.{' '}
+        <strong>Do not send funds directly to the contract address</strong> — you will lose your tokens.
+      </p>
+      <div className={styles.accessBanner}>
+        ✦ With $KATA you get full access to Web3, NFTs &amp; the Play2Earn Ecosystem ✦
       </div>
 
-      <div className="flex flex-col md:flex-row md:flex-wrap gap-4 sm:gap-6 md:gap-8">
-        {tokenStore.map((store, i) => (
-          <div
-            key={i}
-            className="flex flex-col gap-4 justify-center items-center sm:gap-6 md:gap-8 flex-1 border-[2px] border-[#202020] rounded-lg p-5 bg-black"
-          >
-            <div className="flex flex-row md:flex-col xl:flex-row items-center gap-4 md:gap-3 lg:gap-4 2xl:gap-8">
-              {/* pan cake logo */}
-              {/* <Link href={"/"}> */}
-              <Image
-                src={store.src}
-                alt=""
-                width={130}
-                height={100}
-                className={` ${
-                  i === 1
-                    ? "w-14 h-12 sm:h-16 sm:w-20 md:h-12 md:w-16 lg:w-20 lg:h-16 xl:w-20 object-contain"
-                    : "h-12 sm:h-16 md:h-11 lg:h-16 object-contain"
-                }`}
-              />
-              {/* </Link> */}
-              {/* button */}
-              <Link href={store.link || "/"} target="_blank" rel="noreferer">
-                <Button
-                  variant="customAnimated"
-                  className=" sm:px-10 sm:py-8 md:py-5 md:px-7 lg:py-8 lg:px-10 font-grind text-base md:text-base lg:text-xl"
-                >
-                  {store.place}
-                </Button>
-              </Link>
+      <div className={styles.dexCards}>
+        {dexes.map((dex) => (
+          <div key={dex.name} className={styles.dexCard}>
+            <div className={styles.dexHeader}>
+              <div className={styles.dexName}>{dex.name}</div>
+              {dex.logo ? (
+                <span className={styles.dexEmoji}>{dex.logo}</span>
+              ) : (
+                <Image
+                  src="https://s2.coinmarketcap.com/static/img/coins/64x64/7186.png"
+                  alt="PancakeSwap"
+                  width={36}
+                  height={36}
+                  className={styles.dexImg}
+                  unoptimized
+                />
+              )}
             </div>
-            {store.code && (
-              <p
-                onClick={() => copyCode(store.code, i)}
-                className="text-wrap text-white break-all text-center cursor-pointer"
-              >
-                {store.code}
-                <FaCopy color="#fff" size={20} className="inline ml-2 mr-3" />
-                <span className="inline">{copiedIndex === i && "Copied"}</span>
-              </p>
-            )}
+            <div className={styles.dexBadge}>{dex.chain}</div>
+            <div className={styles.contractLabel}>Contract Address</div>
+            <div className={styles.contractWrap}>
+              <span className={styles.contractAddr}>{dex.address}</span>
+              <CopyButton address={dex.address} />
+            </div>
           </div>
         ))}
       </div>
 
-      <div className="overflow-hidden">
-        <ul className="grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 flex justify-center items-center">
-          {kataTokenStorePartner.map((store, i) => (
-            <li key={i} className="mx-auto sm:mx-4 my-2 list-none">
-              <Link href={store.link} target="_blank" rel="norefferer">
-                <Image
-                  src={store.imgUrl}
-                  alt={store.storeName}
-                  width={154}
-                  height={51}
-                />
-              </Link>
-            </li>
+      <div className={styles.cexSection}>
+        <div className={styles.cexLabel}>Also Available On</div>
+        <div className={styles.cexLogos}>
+          {cexes.map((cex) => (
+            <a key={cex.name} href={cex.href} target="_blank" rel="noreferrer" className={styles.cexPill}>
+              {cex.emoji} {cex.name}
+            </a>
           ))}
-        </ul>
+        </div>
       </div>
-    </section>
-  );
-};
 
-export default WhereToBuyToken;
+      <div className={styles.risk}>
+        <div className={styles.riskTitle}>⚠️ Risk Warning</div>
+        <p className={styles.riskText}>
+          Cryptocurrency trading is subject to high market risk. Please always trade cautiously.
+          Katana Inu is not responsible for any trading losses. You are solely responsible for
+          determining whether any investment or transaction is appropriate for you.
+        </p>
+        <p className={styles.riskNote}>Nothing herein shall be construed as financial advice.</p>
+      </div>
+    </div>
+  )
+}
