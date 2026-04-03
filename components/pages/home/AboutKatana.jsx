@@ -1,6 +1,5 @@
 // components/AboutKatana.jsx
 // Usage: import AboutKatana from '@/components/AboutKatana'
-
 import styles from "./AboutKatana.module.css";
 
 const ArrowIcon = () => (
@@ -77,6 +76,15 @@ export default function AboutKatana() {
           </div>
         ))}
       </div>
+
+      <a
+        href="http://youtube.com/c/katanainu/videos"
+        target="_blank"
+        rel="noreferrer"
+        className={styles.moreVideos}
+      >
+        ▶ More Videos →
+      </a>
 
       <div className={styles.bullets}>
         {bullets.map((text, i) => (
