@@ -69,20 +69,26 @@
 }
 
 .moreVideos {
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(240,165,0,0.45);
+  background: rgba(240,165,0,0.06);
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 13px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: #f0a500;
   text-decoration: none;
-  transition: color 0.2s, letter-spacing 0.2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .moreVideos:hover {
+  background: rgba(240,165,0,0.12);
+  border-color: rgba(240,165,0,0.7);
   color: #ffd060;
-  letter-spacing: 3px;
 }
 
 .bulletIcon {
