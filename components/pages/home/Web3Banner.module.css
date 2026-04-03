@@ -327,6 +327,24 @@
   animation: shine 3s ease-in-out infinite;
 }
 
+.learnMore {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f0a500;
+  text-decoration: none;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+.learnMore:hover {
+  color: #ffd060;
+  letter-spacing: 3px;
+}
+
 @keyframes shine {
   0% {
     left: -100%;
