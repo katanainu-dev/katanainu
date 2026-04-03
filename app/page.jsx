@@ -37,7 +37,7 @@ export default function Home() {
             <Web3Banner />
           </div>
         </div>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <Web2Web3Section />
         </div>
         <div className="flex justify-center">
