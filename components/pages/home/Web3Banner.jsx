@@ -58,7 +58,7 @@ export default function Web3Banner() {
               purple: false,
             },
 {
-  icon: <Image src="/katana-logo.png" alt="Katana Inu" width={28} height={28} style={{objectFit:'contain'}}/>,
+  icon: <Image src="/assets/images/logo.png" alt="Katana Inu" width={28} height={28} style={{objectFit:'contain'}}/>,
   title: "$KATA Token",
   sub: "Earn $KATA Token with Utility",
   purple: true,
