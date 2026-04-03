@@ -30,9 +30,13 @@ export default function Home() {
       <div className="bg-[url('/assets/images/background.jpg')] bg-[50%_25%] bg-cover z-[1]  relative brand_container">
         {/* <Blogs /> */}
         <PlayClosedBeta />
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <Web2Banner />
-          <Web3Banner />
+        <div style={{ display: "flex", gap: "1rem", padding: "0 1rem" }}>
+          <div style={{ width: "50%" }}>
+            <Web2Banner />
+          </div>
+          <div style={{ width: "50%" }}>
+            <Web3Banner />
+          </div>
         </div>
         <Web2Web3Section />
         <div className="flex justify-center">
@@ -48,6 +52,7 @@ export default function Home() {
         <div className="w-full bg-black">
           <Newsletter />
         </div>
+        <BrandLogo />
       </div>
     </main>
   );
