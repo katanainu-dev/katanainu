@@ -14,6 +14,8 @@ import FAQPage from "@/components/pages/home/HomeFaq";
 import LearnMoreAboutWeb3 from "@/components/pages/home/LearnMoreAboutWeb3";
 import Promoters from "@/components/pages/home/Promoters";
 import Web2Web3Section from "@/components/pages/home/Web2Web3Section";
+import Web2Banner from "@/components/pages/home/Web2Banner";
+import Web3Banner from "@/components/pages/home/Web3Banner";
 import Register from "@/components/Register";
 export default function Home() {
   return (
