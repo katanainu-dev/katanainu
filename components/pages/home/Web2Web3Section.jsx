@@ -24,7 +24,9 @@ const web2Bullets = [
 const web3Bullets = [
   <>Katana Inu is also built as a <strong>Web3-enabled game</strong> through our dedicated game launcher. Players who connect to the Web3 ecosystem can access <strong>NFTs, Play-to-Earn mechanics</strong>, and the broader Katana Inu economy.</>,
   <>Holding <strong>$KATA tokens</strong> and NFTs lets you level up, track your stats and player progression, and <strong>earn $KATA tokens back</strong> based on your time and skill — the more you play, the more you can earn.</>,
-  <>Our focus was always a <strong>Fun2Play game</strong> with NFT &amp; Play-to-Earn mechanics alongside full Web2 support. Players can enjoy Katana Inu <strong>separately or together</strong> — they choose, without any restriction or limit.</>,
+  <>Our focus was always a <strong>Fun2Play game</strong> with NFT &amp; Play-to-Earn mechanics alongside full Web2 support. Players can enjoy Katana Inu <strong>separately or together</strong> — they choose, without any restriction or limit.<a href="/web3" className="text-[#f0a500] font-bold hover:text-yellow-300 transition-colors">
+  Web3 / Token Information →
+</a></>,
 ]
 
 function BulletList({ items }) {
