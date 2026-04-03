@@ -50,7 +50,7 @@ const faqs = [
         Absolutely not. The Web3 layer is entirely optional and does not affect
         gameplay, balance or access. Katana Inu follows a strict{" "}
         <strong>Fun2Play philosophy</strong> — all skins and abilities are
-        purely cosmetic, with no Pay2Win mechanics.
+        purely cosmetic, with no Pay2Win mechanics. On Web2, it will be some different Characters.
       </>
     ),
   },
@@ -59,9 +59,8 @@ const faqs = [
     answer: (
       <>
         Yes. You pick your path — <strong>Steam for Web2</strong> or the{" "}
-        <strong>Katana Inu Launcher for Web3</strong>. Both play on the same
-        servers, share the same battlefields and compete in the same rankings
-        together.
+        <strong>Katana Inu Launcher for Web3</strong>. Both play on different
+        servers, but share the same battlefields, maps, skill and compete in the same ranking. So that means, a Web3 Player won't play with a Web2 player (different servers), but the system and ranking are same.
       </>
     ),
   },
