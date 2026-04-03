@@ -77,11 +77,10 @@ export default function Web3Banner() {
           ))}
         </div>
 
-        {/* F2P label */}
+{/* F2P label */}
         <div className={styles.f2p}>
           Play2Earn ecosystem, FREE2PLAY &amp; NO-PAY2WIN{" "}
         </div>
-
         {/* CTA */}
         <a
           href="https://download.katanainu.com/Katanainu-launcher.exe"
@@ -89,6 +88,11 @@ export default function Web3Banner() {
           className={styles.linkWrapper}
         >
           <button className={styles.ctaBtn}>DOWNLOAD LAUNCHER</button>
+        </a>
+
+        {/* Learn More */}
+        <a href="/web3" className={styles.learnMore}>
+          Learn More About Web3 →
         </a>
       </div>
     </div>
