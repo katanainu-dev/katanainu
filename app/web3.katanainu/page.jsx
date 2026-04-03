@@ -7,7 +7,7 @@ export default function Web3Katana() {
   return (
     <main className="overflow-hidden">
       <div className="bg-[url('/assets/images/background.jpg')] bg-[0%_25%] bg-cover z-[1] relative brand_container">
-        <Brand />
+        <BrandLogo />
       </div>
       <TokenOverview />
       <WhereToBuyToken />
