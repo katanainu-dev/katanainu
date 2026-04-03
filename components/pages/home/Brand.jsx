@@ -97,27 +97,38 @@ const Brand = () => {
 
             {/* More Videos Button */}
             <a
-              href="http://youtube.com/c/katanainu/videos"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                color: '#f0a500',
-                border: '1px solid rgba(240,165,0,0.45)',
-                padding: '10px 20px',
-                display: 'inline-block',
-                marginTop: '4px',
-                borderRadius: '10px',
-                fontSize: '13px',
-                fontWeight: '700',
-                letterSpacing: '3px',
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                background: 'rgba(240,165,0,0.06)',
-                textAlign: 'center',
-              }}
-            >
-              ▶ More Videos →
-            </a>
+href="http://youtube.com/c/katanainu/videos"
+  target="_blank"
+  rel="noreferrer"
+  onMouseEnter={e => {
+    e.currentTarget.style.background = 'rgba(240,165,0,0.12)';
+    e.currentTarget.style.borderColor = 'rgba(240,165,0,0.7)';
+    e.currentTarget.style.transform = 'translateY(-2px)';
+  }}
+  onMouseLeave={e => {
+    e.currentTarget.style.background = 'rgba(240,165,0,0.06)';
+    e.currentTarget.style.borderColor = 'rgba(240,165,0,0.45)';
+    e.currentTarget.style.transform = 'translateY(0)';
+  }}
+  style={{
+    color: '#f0a500',
+    border: '1px solid rgba(240,165,0,0.45)',
+    padding: '10px 20px',
+    display: 'inline-block',
+    marginTop: '4px',
+    borderRadius: '10px',
+    fontSize: '13px',
+    fontWeight: '700',
+    letterSpacing: '3px',
+    textTransform: 'uppercase',
+    textDecoration: 'none',
+    background: 'rgba(240,165,0,0.06)',
+    textAlign: 'center',
+    transition: 'all 0.2s ease',
+  }}
+>
+  ▶ More Videos →
+</a>
 
           </motion.div>
         </div>
