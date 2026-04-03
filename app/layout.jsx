@@ -29,8 +29,8 @@ const jost = Jost({
 });
 
 export const metadata = {
-  title: "Multiplayer on-chain action game - Katana Inu",
-  description: "Multiplayer on-chain action game - Katana Inu",
+  title: "Katana Inu - A Multiplayer action game",
+  description: "A Fast path multiplayera ction game with swords and ability fight Battle Royale and PVP, AAA Quality Fun2Play",
 };
 
 export default function RootLayout({ children }) {
