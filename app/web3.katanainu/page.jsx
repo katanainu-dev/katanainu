@@ -3,6 +3,7 @@ import WhereToBuyToken from "@/components/pages/home/WhereToBuyToken";
 export default function Web3Katana() {
   return (
     <main className="overflow-hidden">
+      <BrandLogo />
       <TokenOverview />
       <WhereToBuyToken />
       <section className="py-20 px-4 md:px-10 bg-black text-center">
