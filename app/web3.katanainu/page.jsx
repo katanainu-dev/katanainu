@@ -9,8 +9,8 @@ export default function Web3Katana() {
 <div className="bg-[url('/assets/images/background.jpg')] bg-[0%_25%] bg-cover z-[1] relative brand_container pt-20 pb-2 md:pt-20 md:pb-2">
   <BrandLogo />
 </div>
-      <TokenOverview />
       <WhereToBuyToken />
+      <TokenOverview />
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 1rem" }}>
         <KataP2ESection />
       </div>
