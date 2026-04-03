@@ -139,7 +139,6 @@
   margin-left: 4px;
 }
 
-/* ✅ FIXED */
 .openLink {
   font-size: 13px;
   color: rgba(240,165,0,0.6);
@@ -147,8 +146,10 @@
   cursor: pointer;
   transition: color 0.2s;
 }
-.openLink:hover { color: #f0a500; }
 
+.openLink:hover {
+  color: #f0a500;
+}
 /* ── Info Block ── */
 .infoBlock {
   background: rgba(255,255,255,0.02);
