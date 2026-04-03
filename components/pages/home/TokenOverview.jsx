@@ -7,7 +7,7 @@ import { useState } from "react";
 const TokenOverview = () => {
   const [active, setActive] = useState(Array(coinkataData.length).fill(false));
   return (
-    <section className="main-container pt-6">
+    <section className="main-container pt-9">
       <div className="flex flex-col justify-center items-center gap-2 mb-10 xl:mb-[200px]">
         <h5 className="uppercase text-gradient font-bold tracking-[2px] text-lg md:text-xl lg:text-2xl font-jost">
           $Kata
