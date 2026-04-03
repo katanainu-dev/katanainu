@@ -1,6 +1,7 @@
 import TokenOverview from "@/components/pages/home/TokenOverview";
 import WhereToBuyToken from "@/components/pages/home/WhereToBuyToken";
 import KataP2ESection from "@/components/pages/home/KataP2ESection";
+import Brand from "@/components/pages/home/Brand";
 
 export default function Web3Katana() {
   return (
