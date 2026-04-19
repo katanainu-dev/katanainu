@@ -3,7 +3,6 @@
 // Usage: import AboutFull from '@/components/AboutFull'
 
 import styles from "./AboutFull.module.css";
-<section className={styles.aboutHero} style={{ paddingTop: '80px' }}>
 
 const ArrowIcon = () => (
   <svg viewBox="0 0 8 8" className={styles.arrowSvg}>
