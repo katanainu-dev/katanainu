@@ -4,8 +4,13 @@ module.exports = {
     return [
       {
         source: "/download",
-        destination: "https://download.katanainu.com/Katanainu-launcher.exe", // External URL
-        permanent: true, // true = 308 Permanent Redirect, false = 307 Temporary Redirect
+        destination: "https://download.katanainu.com/Katanainu-launcher.exe",
+        permanent: true,
+      },
+      {
+        source: "/invest",
+        destination: "https://pitch.katanainu.com/invest",
+        permanent: false,
       },
     ];
   },
