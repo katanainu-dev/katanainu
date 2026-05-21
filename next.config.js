@@ -7,10 +7,17 @@ module.exports = {
         destination: "https://download.katanainu.com/Katanainu-launcher.exe",
         permanent: true,
       },
+    ];
+  },
+  async rewrites() {
+    return [
       {
         source: "/invest",
         destination: "https://pitch.katanainu.com/invest",
-        permanent: false,
+      },
+      {
+        source: "/invest/:path*",
+        destination: "https://pitch.katanainu.com/invest/:path*",
       },
     ];
   },
